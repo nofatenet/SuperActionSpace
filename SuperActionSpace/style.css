@@ -1,0 +1,168 @@
+/* turret-road-regular - latin */
+@font-face {
+    font-family: 'Turret Road';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('turret-road-v2-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('turret-road-v2-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+body{
+    margin: 0;
+    background-color: #201520;
+}
+
+#container{
+    position: relative;
+    width: 800px;
+    height: 600px;
+    left: 5%;
+    background-color: #000;
+    overflow: hidden;
+    background-image: url(background.png);
+    background-position-y: 28px;
+}
+
+.dashboard{
+    background-color: #000;
+    color: rgb(73, 113, 223);
+    font-size: 1.5em;
+    text-align: center;
+    padding: 8px;
+    font-family: 'Turret Road';
+}
+
+.title{
+    position: absolute;
+    top: 180px;
+    left: 25%;
+    width: 480px;
+    color: #999;
+    z-index: 10;
+    font-size: 3em;
+    font-family: 'Turret Road';
+    filter: drop-shadow(0px 20px 4px #999);
+}
+
+.btnStart{
+    position: absolute;
+    top: 480px;
+    left: 33%;
+    width: 200px;
+    border: 1px solid #000;
+    background-color: slategrey;
+    color: snow;
+    font-size: 2em;
+    z-index: 200;
+    text-align: center;
+    border-radius: 25px;
+    padding: 5px;
+    cursor: crosshair;
+    font-family: 'Turret Road';
+}
+
+.road{
+    position: absolute;
+    height: 55px;
+    width: 250px;
+    top: 0;
+    left: 100px;
+    text-align: center;
+    color: snow;
+    background-color: #000;
+    border-radius: 2px;
+    opacity: 0;
+}
+
+.road:before{
+    content: " ";
+    vertical-align: top;
+    color: white;
+    width: 1px;
+    height: 10px;
+    line-height: 30px;
+    left: 50%;
+    position: absolute;
+}
+
+.bullet{
+    position: absolute;
+    width: 2px;
+    height: 4px;
+    top: 0px;
+    left: 0px;
+    background-color: #999;
+    z-index: 99;
+}
+
+.fckingEnemy{
+    position: absolute;
+    width: 70px;
+    height: 60px;
+    top: 0px;
+    left: 0px;
+    border-radius: 5px;
+    background-image: url("ship2.png");
+    background-size: cover;
+    z-index: 99;
+    text-align: center;
+    /* background-color: yellowgreen; */
+}
+
+.playerCar{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    bottom: 60px;
+    left: 400px;
+    border-radius: 5px;
+    background-image: url("ship1.png");
+    background-size: cover;
+    background-position: -8px;
+    z-index: 100;
+    /* background-color: yellowgreen; */
+    filter: drop-shadow(0px 12px 6px #310);
+}
+
+.playerCarUp{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    bottom: 60px;
+    left: 400px;
+    border-radius: 5px;
+    background-image: url("ship1.png");
+    background-size: cover;
+    background-position: -8px;
+    z-index: 100;
+    /* background-color: yellowgreen; */
+    filter: drop-shadow(0px 24px 8px #620);
+}
+
+.playerCarLeft{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    bottom: 60px;
+    left: 250px;
+    border-radius: 5px;
+    background-image: url("ship1left.png");
+    background-size: cover;
+    background-position: -8px;
+    z-index: 100;
+    filter: drop-shadow(10px 24px 8px #610);
+}
+.playerCarRight{
+    position: absolute;
+    width: 72px;
+    height: 60px;
+    bottom: 60px;
+    left: 250px;
+    border-radius: 5px;
+    background-image: url("ship1right.png");
+    background-size: cover;
+    z-index: 100;
+    filter: drop-shadow(-10px 24px 8px #610);
+}
